@@ -1,68 +1,361 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --bui_color_accent_border: #ffb700;
+  --bui_color_callout_border: #f56700;
+  --bui_color_brand_genius_secondary_foreground: #febb02;
+  --bui_color_cta_highlighted: #003b95;
+  --bui_color_action_highlighted: #003b95;
+  --bui_color_destructive_highlighted: #800009;
+  --bui_color_on_accent_background: #242424;
+  --bui_color_on_callout_background: #242424;
+  --bui_color_on_cta_background: #fff;
+  --bui_color_on_action_background: #fff;
+  --bui_color_on_destructive_background: #fff;
+  --bui_color_on_constructive_background: #fff;
+  --bui_color_on_brand_primary_background: #fff;
+  --bui_color_on_brand_genius_primary_background: #fff;
+  --bui_color_transparent: rgba(26, 26, 26, 0);
+  --bui_color_cta_background: #006ce4;
+  --bui_color_cta_background_rgb: 0, 108, 228;
+  --bui_color_black_with_alpha: rgba(26, 26, 26, 0.5);
+  --bui_color_accent_background: #ffb700;
+  --bui_color_accent_background_rgb: 255, 183, 0;
+  --bui_color_action_background: #006ce4;
+  --bui_color_action_background_rgb: 0, 108, 228;
+  --bui_color_callout_background: #f56700;
+  --bui_color_callout_background_rgb: 245, 103, 0;
+  --bui_color_destructive_background: #d4111e;
+  --bui_color_destructive_background_rgb: 212, 17, 30;
+  --bui_color_constructive_background: #008234;
+  --bui_color_constructive_background_rgb: 0, 130, 52;
+  --bui_color_brand_primary_background: #003b95;
+  --bui_color_brand_primary_background_rgb: 0, 59, 149;
+  --bui_color_brand_genius_primary_background: #003b95;
+  --bui_color_brand_genius_primary_background_rgb: 0, 59, 149;
+  --bui_color_on_brand_primary_background_dynamic: #fff;
+  --bui_color_black: #1a1a1a;
+  --bui_color_black_rgb: 26, 26, 26;
+  --bui_color_white: #fff;
+  --bui_color_white_rgb: 255, 255, 255;
+  --bui_shadow_100: 0px 2px 8px 0px rgba(26, 26, 26, 0.16);
+  --bui_shadow_200: 0px 2px 16px 0px rgba(26, 26, 26, 0.24);
+  --bui_shadow_300: 0px 4px 16px 0px rgba(26, 26, 26, 0.32);
+  --bui_spacing_1x: 4px;
+  --bui_spacing_2x: 8px;
+  --bui_spacing_3x: 12px;
+  --bui_spacing_4x: 16px;
+  --bui_spacing_6x: 24px;
+  --bui_spacing_8x: 32px;
+  --bui_spacing_12x: 48px;
+  --bui_spacing_16x: 64px;
+  --bui_spacing_24x: 96px;
+  --bui_spacing_half: 2px;
+  --bui_border_width_100: 1px;
+  --bui_border_width_200: 2px;
+  --bui_border_radius_100: 4px;
+  --bui_border_radius_200: 8px;
+  --bui_border_radius_300: 12px;
+  --DO_NOT_USE_bui_small_font_body_1_font-size: 16px;
+  --DO_NOT_USE_bui_small_font_body_1_font-weight: 400;
+  --DO_NOT_USE_bui_small_font_body_1_line-height: 24px;
+  --DO_NOT_USE_bui_small_font_body_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_small_font_body_2_font-size: 14px;
+  --DO_NOT_USE_bui_small_font_body_2_font-weight: 400;
+  --DO_NOT_USE_bui_small_font_body_2_line-height: 20px;
+  --DO_NOT_USE_bui_small_font_body_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_small_font_small_1_font-size: 12px;
+  --DO_NOT_USE_bui_small_font_small_1_font-weight: 400;
+  --DO_NOT_USE_bui_small_font_small_1_line-height: 18px;
+  --DO_NOT_USE_bui_small_font_small_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_small_font_small_2_font-size: 10px;
+  --DO_NOT_USE_bui_small_font_small_2_font-weight: 500;
+  --DO_NOT_USE_bui_small_font_small_2_line-height: 16px;
+  --DO_NOT_USE_bui_small_font_small_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_small_font_strong_1_font-size: 16px;
+  --DO_NOT_USE_bui_small_font_strong_1_font-weight: 700;
+  --DO_NOT_USE_bui_small_font_strong_1_line-height: 24px;
+  --DO_NOT_USE_bui_small_font_strong_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_small_font_strong_2_font-size: 14px;
+  --DO_NOT_USE_bui_small_font_strong_2_font-weight: 700;
+  --DO_NOT_USE_bui_small_font_strong_2_line-height: 20px;
+  --DO_NOT_USE_bui_small_font_strong_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_small_font_display_1_font-size: 40px;
+  --DO_NOT_USE_bui_small_font_display_1_font-weight: 800;
+  --DO_NOT_USE_bui_small_font_display_1_line-height: 52px;
+  --DO_NOT_USE_bui_small_font_display_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_display_2_font-size: 36px;
+  --DO_NOT_USE_bui_small_font_display_2_font-weight: 800;
+  --DO_NOT_USE_bui_small_font_display_2_line-height: 48px;
+  --DO_NOT_USE_bui_small_font_display_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_display_3_font-size: 32px;
+  --DO_NOT_USE_bui_small_font_display_3_font-weight: 800;
+  --DO_NOT_USE_bui_small_font_display_3_line-height: 40px;
+  --DO_NOT_USE_bui_small_font_display_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_featured_1_font-size: 20px;
+  --DO_NOT_USE_bui_small_font_featured_1_font-weight: 400;
+  --DO_NOT_USE_bui_small_font_featured_1_line-height: 28px;
+  --DO_NOT_USE_bui_small_font_featured_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_featured_2_font-size: 20px;
+  --DO_NOT_USE_bui_small_font_featured_2_font-weight: 400;
+  --DO_NOT_USE_bui_small_font_featured_2_line-height: 28px;
+  --DO_NOT_USE_bui_small_font_featured_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_featured_3_font-size: 20px;
+  --DO_NOT_USE_bui_small_font_featured_3_font-weight: 400;
+  --DO_NOT_USE_bui_small_font_featured_3_line-height: 28px;
+  --DO_NOT_USE_bui_small_font_featured_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_headline_1_font-size: 28px;
+  --DO_NOT_USE_bui_small_font_headline_1_font-weight: 800;
+  --DO_NOT_USE_bui_small_font_headline_1_line-height: 36px;
+  --DO_NOT_USE_bui_small_font_headline_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_headline_2_font-size: 24px;
+  --DO_NOT_USE_bui_small_font_headline_2_font-weight: 800;
+  --DO_NOT_USE_bui_small_font_headline_2_line-height: 32px;
+  --DO_NOT_USE_bui_small_font_headline_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_headline_3_font-size: 20px;
+  --DO_NOT_USE_bui_small_font_headline_3_font-weight: 800;
+  --DO_NOT_USE_bui_small_font_headline_3_line-height: 28px;
+  --DO_NOT_USE_bui_small_font_headline_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_small_font_emphasized_1_font-size: 16px;
+  --DO_NOT_USE_bui_small_font_emphasized_1_font-weight: 500;
+  --DO_NOT_USE_bui_small_font_emphasized_1_line-height: 24px;
+  --DO_NOT_USE_bui_small_font_emphasized_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_small_font_emphasized_2_font-size: 14px;
+  --DO_NOT_USE_bui_small_font_emphasized_2_font-weight: 500;
+  --DO_NOT_USE_bui_small_font_emphasized_2_line-height: 20px;
+  --DO_NOT_USE_bui_small_font_emphasized_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_body_1_font-size: 16px;
+  --DO_NOT_USE_bui_medium_font_body_1_font-weight: 400;
+  --DO_NOT_USE_bui_medium_font_body_1_line-height: 24px;
+  --DO_NOT_USE_bui_medium_font_body_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_body_2_font-size: 14px;
+  --DO_NOT_USE_bui_medium_font_body_2_font-weight: 400;
+  --DO_NOT_USE_bui_medium_font_body_2_line-height: 20px;
+  --DO_NOT_USE_bui_medium_font_body_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_small_1_font-size: 12px;
+  --DO_NOT_USE_bui_medium_font_small_1_font-weight: 400;
+  --DO_NOT_USE_bui_medium_font_small_1_line-height: 18px;
+  --DO_NOT_USE_bui_medium_font_small_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_small_2_font-size: 12px;
+  --DO_NOT_USE_bui_medium_font_small_2_font-weight: 500;
+  --DO_NOT_USE_bui_medium_font_small_2_line-height: 18px;
+  --DO_NOT_USE_bui_medium_font_small_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_strong_1_font-size: 16px;
+  --DO_NOT_USE_bui_medium_font_strong_1_font-weight: 700;
+  --DO_NOT_USE_bui_medium_font_strong_1_line-height: 24px;
+  --DO_NOT_USE_bui_medium_font_strong_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_strong_2_font-size: 14px;
+  --DO_NOT_USE_bui_medium_font_strong_2_font-weight: 700;
+  --DO_NOT_USE_bui_medium_font_strong_2_line-height: 20px;
+  --DO_NOT_USE_bui_medium_font_strong_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_display_1_font-size: 64px;
+  --DO_NOT_USE_bui_medium_font_display_1_font-weight: 800;
+  --DO_NOT_USE_bui_medium_font_display_1_line-height: 72px;
+  --DO_NOT_USE_bui_medium_font_display_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_display_2_font-size: 56px;
+  --DO_NOT_USE_bui_medium_font_display_2_font-weight: 800;
+  --DO_NOT_USE_bui_medium_font_display_2_line-height: 64px;
+  --DO_NOT_USE_bui_medium_font_display_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_display_3_font-size: 48px;
+  --DO_NOT_USE_bui_medium_font_display_3_font-weight: 800;
+  --DO_NOT_USE_bui_medium_font_display_3_line-height: 62px;
+  --DO_NOT_USE_bui_medium_font_display_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_featured_1_font-size: 32px;
+  --DO_NOT_USE_bui_medium_font_featured_1_font-weight: 400;
+  --DO_NOT_USE_bui_medium_font_featured_1_line-height: 40px;
+  --DO_NOT_USE_bui_medium_font_featured_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_featured_2_font-size: 24px;
+  --DO_NOT_USE_bui_medium_font_featured_2_font-weight: 400;
+  --DO_NOT_USE_bui_medium_font_featured_2_line-height: 32px;
+  --DO_NOT_USE_bui_medium_font_featured_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_featured_3_font-size: 20px;
+  --DO_NOT_USE_bui_medium_font_featured_3_font-weight: 400;
+  --DO_NOT_USE_bui_medium_font_featured_3_line-height: 28px;
+  --DO_NOT_USE_bui_medium_font_featured_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_headline_1_font-size: 32px;
+  --DO_NOT_USE_bui_medium_font_headline_1_font-weight: 800;
+  --DO_NOT_USE_bui_medium_font_headline_1_line-height: 40px;
+  --DO_NOT_USE_bui_medium_font_headline_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_headline_2_font-size: 24px;
+  --DO_NOT_USE_bui_medium_font_headline_2_font-weight: 800;
+  --DO_NOT_USE_bui_medium_font_headline_2_line-height: 32px;
+  --DO_NOT_USE_bui_medium_font_headline_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_headline_3_font-size: 20px;
+  --DO_NOT_USE_bui_medium_font_headline_3_font-weight: 800;
+  --DO_NOT_USE_bui_medium_font_headline_3_line-height: 28px;
+  --DO_NOT_USE_bui_medium_font_headline_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_medium_font_emphasized_1_font-size: 16px;
+  --DO_NOT_USE_bui_medium_font_emphasized_1_font-weight: 500;
+  --DO_NOT_USE_bui_medium_font_emphasized_1_line-height: 24px;
+  --DO_NOT_USE_bui_medium_font_emphasized_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_medium_font_emphasized_2_font-size: 14px;
+  --DO_NOT_USE_bui_medium_font_emphasized_2_font-weight: 500;
+  --DO_NOT_USE_bui_medium_font_emphasized_2_line-height: 20px;
+  --DO_NOT_USE_bui_medium_font_emphasized_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_body_1_font-size: 16px;
+  --DO_NOT_USE_bui_large_font_body_1_font-weight: 400;
+  --DO_NOT_USE_bui_large_font_body_1_line-height: 24px;
+  --DO_NOT_USE_bui_large_font_body_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_body_2_font-size: 14px;
+  --DO_NOT_USE_bui_large_font_body_2_font-weight: 400;
+  --DO_NOT_USE_bui_large_font_body_2_line-height: 20px;
+  --DO_NOT_USE_bui_large_font_body_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_small_1_font-size: 12px;
+  --DO_NOT_USE_bui_large_font_small_1_font-weight: 400;
+  --DO_NOT_USE_bui_large_font_small_1_line-height: 18px;
+  --DO_NOT_USE_bui_large_font_small_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_small_2_font-size: 12px;
+  --DO_NOT_USE_bui_large_font_small_2_font-weight: 500;
+  --DO_NOT_USE_bui_large_font_small_2_line-height: 18px;
+  --DO_NOT_USE_bui_large_font_small_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_strong_1_font-size: 16px;
+  --DO_NOT_USE_bui_large_font_strong_1_font-weight: 700;
+  --DO_NOT_USE_bui_large_font_strong_1_line-height: 24px;
+  --DO_NOT_USE_bui_large_font_strong_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_strong_2_font-size: 14px;
+  --DO_NOT_USE_bui_large_font_strong_2_font-weight: 700;
+  --DO_NOT_USE_bui_large_font_strong_2_line-height: 20px;
+  --DO_NOT_USE_bui_large_font_strong_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_display_1_font-size: 96px;
+  --DO_NOT_USE_bui_large_font_display_1_font-weight: 800;
+  --DO_NOT_USE_bui_large_font_display_1_line-height: 108px;
+  --DO_NOT_USE_bui_large_font_display_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_display_2_font-size: 64px;
+  --DO_NOT_USE_bui_large_font_display_2_font-weight: 800;
+  --DO_NOT_USE_bui_large_font_display_2_line-height: 72px;
+  --DO_NOT_USE_bui_large_font_display_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_display_3_font-size: 48px;
+  --DO_NOT_USE_bui_large_font_display_3_font-weight: 800;
+  --DO_NOT_USE_bui_large_font_display_3_line-height: 62px;
+  --DO_NOT_USE_bui_large_font_display_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_featured_1_font-size: 32px;
+  --DO_NOT_USE_bui_large_font_featured_1_font-weight: 400;
+  --DO_NOT_USE_bui_large_font_featured_1_line-height: 40px;
+  --DO_NOT_USE_bui_large_font_featured_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_featured_2_font-size: 24px;
+  --DO_NOT_USE_bui_large_font_featured_2_font-weight: 400;
+  --DO_NOT_USE_bui_large_font_featured_2_line-height: 32px;
+  --DO_NOT_USE_bui_large_font_featured_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_featured_3_font-size: 20px;
+  --DO_NOT_USE_bui_large_font_featured_3_font-weight: 400;
+  --DO_NOT_USE_bui_large_font_featured_3_line-height: 28px;
+  --DO_NOT_USE_bui_large_font_featured_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_headline_1_font-size: 32px;
+  --DO_NOT_USE_bui_large_font_headline_1_font-weight: 800;
+  --DO_NOT_USE_bui_large_font_headline_1_line-height: 40px;
+  --DO_NOT_USE_bui_large_font_headline_1_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_headline_2_font-size: 24px;
+  --DO_NOT_USE_bui_large_font_headline_2_font-weight: 800;
+  --DO_NOT_USE_bui_large_font_headline_2_line-height: 32px;
+  --DO_NOT_USE_bui_large_font_headline_2_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_headline_3_font-size: 20px;
+  --DO_NOT_USE_bui_large_font_headline_3_font-weight: 800;
+  --DO_NOT_USE_bui_large_font_headline_3_line-height: 28px;
+  --DO_NOT_USE_bui_large_font_headline_3_font-family: 'Blue Sans',
+    BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    sans-serif;
+  --DO_NOT_USE_bui_large_font_emphasized_1_font-size: 16px;
+  --DO_NOT_USE_bui_large_font_emphasized_1_font-weight: 500;
+  --DO_NOT_USE_bui_large_font_emphasized_1_line-height: 24px;
+  --DO_NOT_USE_bui_large_font_emphasized_1_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --DO_NOT_USE_bui_large_font_emphasized_2_font-size: 14px;
+  --DO_NOT_USE_bui_large_font_emphasized_2_font-weight: 500;
+  --DO_NOT_USE_bui_large_font_emphasized_2_line-height: 20px;
+  --DO_NOT_USE_bui_large_font_emphasized_2_font-family: BlinkMacSystemFont,
+    -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+  background-color: #003b95;
+  color: white;
+  padding: var(--bui_spacing_2x) var(--bui_spacing_4x) 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+header nav {
+  padding: var(--bui_spacing_1x) var(--bui_spacing_4x) var(--bui_spacing_2x);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+header nav div {
+  flex-grow: 1;
+  padding: var(--bui_spacing_2x) var(--bui_spacing_4x) var(--bui_spacing_2x) 0;
+  text-align: center;
 }
